@@ -3,8 +3,13 @@ import numpy as np
 import pandas as pd
 import pickle
 
+file_path = 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Python 3.12/ANOTHER/rfr.pkl'
+
+   # Load the pickled model using the full file path
+with open(file_path, 'rb') as file:
+       rfr = pickle.load(file)
 # laod model
-rfr = pickle.load(open('rfr.pkl','rb'))
+#rfr = pickle.load(open('rfr.pkl','rb'))
 x_train = pd.read_csv('X_train.csv')
 
 def pred(Gender,Age,Height,Weight,Duration,Heart_rate,Body_temp):
